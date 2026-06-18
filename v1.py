@@ -22,7 +22,7 @@ class GovernedEtfMomentumRotation(QCAlgorithm):
         # Backtest and account settings
         # -----------------------------
         self.SetStartDate(2007, 1, 1)
-        self.SetEndDate(2025, 12, 31)
+        self.SetEndDate(2009, 12, 31)
         self.SetCash(100000)
 
         # -----------------------------
@@ -46,7 +46,8 @@ class GovernedEtfMomentumRotation(QCAlgorithm):
 
         for ticker in risk_tickers + [defensive_ticker]:
             security = self.AddEquity(ticker, Resolution.Daily)
-            security.SetLeverage(1.0)  # Governance rule: no leverage.
+            security.SetLeverage(1.0)
+            security.SetDataNormalizationMode(DataNormalizationMode.Adjusted)
             self.symbols_by_ticker[ticker] = security.Symbol
 
         self.risk_symbols = [self.symbols_by_ticker[ticker] for ticker in risk_tickers]
