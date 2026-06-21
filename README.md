@@ -108,7 +108,7 @@ algo_trading_code/
     └── JSON/
         │
         ├── benchmarks/
-        │   ├── Equal_Weight_ETF_results.json
+        │   ├── equal_weight_ETF_full_window.json
         │   ├── sp500_full_window.json
         │   ├── sp500_stress_covid_2020.json
         │   ├── sp500_stress_gfc_2007-2009.json
@@ -169,7 +169,7 @@ Contains exported QuantConnect JSON results for the benchmark strategies.
 | `sp500_stress_gfc_2007-2009.json` | SPY benchmark over the Global Financial Crisis stress window.   |
 | `sp500_stress_covid_2020.json`    | SPY benchmark over the 2020 COVID stress window.                |
 | `sp500_stress_rates_2022.json`    | SPY benchmark over the 2022 inflation/rate-shock stress window. |
-| `Equal_Weight_ETF_results.json`   | Static equal-weight ETF basket benchmark result.                |
+| `equal_weight_ETF_full_window.json`   | Static equal-weight ETF basket benchmark result.                |
 
 ### `backtest_returns/JSON/v1/`
 
